@@ -1,5 +1,6 @@
 # 单正负Power工具[双模式]
 **Power 同时支持增益（正数）和减益（负数）两种模式，自动切换图标、标题、描述**
+
 使用RitsuLib前置来制作优化了一下
 
 继承 ModDynamicIconPower 类型
