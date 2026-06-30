@@ -39,8 +39,11 @@ protected override MonsterMoveStateMachine GenerateMoveStateMachine()
 res://
 └── TestId(对应modid)
     └── localization
-        └── zhs
-            └── intents.json
+        ├── zhs
+		│    └── ui_translation.json
+        ├── eng
+		│    └── ui_translation.json
+		等等
 ```
 *json内容*
 ```
