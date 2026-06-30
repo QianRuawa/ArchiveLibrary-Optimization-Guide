@@ -34,6 +34,7 @@ protected override MonsterMoveStateMachine GenerateMoveStateMachine()
 在显示攻击意图后面添加
 ### CustomLocPrefix
 - 没有设置的话，就默认使用原版的ATTACK
+- 
 **要求创建**
 ```
 res://
