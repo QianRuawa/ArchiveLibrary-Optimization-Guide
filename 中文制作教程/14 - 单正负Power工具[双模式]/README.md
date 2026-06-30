@@ -1,9 +1,13 @@
 # 单正负Power工具[双模式]
 **Power 同时支持增益（正数）和减益（负数）两种模式，自动切换图标、标题、描述**
+- 自动检测更新描述
+- 标题/描述自动切换
+- Buff/Dubuff 描述框自动切换
+- 正负共用.smartDescription，用 {Amount:cond:>0?...|...} 条件式区分
 
-使用RitsuLib前置来制作优化了一下
+使用RitsuLib前置，制作优化了一下
 
-继承 ModDynamicIconPower 类型
+请继承 ModDynamicIconPower 类型
 
 这里是我制作的buff，显示部分制作
 ```csharp
@@ -23,10 +27,6 @@ public class AttackModifier : ModDynamicIconPower
 ### public virtual string NegativeIconPath => PowerCategory.Adverse.GetIconPath(IconId);
 **负数图标路径，默认使用 Adverse 分类 + IconId 自动生成。可 override 自定义**
 
-- 自动检测更新描述
-- 标题/描述自动切换
-- Buff/Dubuff 描述框自动切换
-- 正负共用.smartDescription，用 {Amount:cond:>0?...|...} 条件式区分
 
 json内容
 ```
