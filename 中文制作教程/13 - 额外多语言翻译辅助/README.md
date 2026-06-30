@@ -1,5 +1,7 @@
 # 额外多语言翻译辅助
-添加额外翻译
+- 添加额外翻译
+- 自动识别调用方
+- 多个 Mod 各管各的翻译文件，key 重复不会冲突
 
 **要求创建**
 ```
@@ -32,9 +34,9 @@ public class TestEntiyId
     "COST_REDUCTION_SPECIFIC": "指定卡牌[gold]{0}[/gold]费用减少[blue]{1}[/blue]点"
 }
 ```
-### string text = UIHelper.Get("MY_KEY");
+### string text = UIHelper.Get("HELLO");
 **简单获取翻译内容**
 ### string msg = UIHelper.Get("COST_REDUCTION_SPECIFIC", cardTitle, amount);
 **获取带参数的翻译内容**
 ### UIHelper.Default?.Get("MY_KEY");
-**简单获取翻译内容**
+**指定默认实例 翻译内容**
