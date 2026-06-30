@@ -2,8 +2,26 @@
 **场景配置**
 
 **注意一下**
-- 代码查找的是自己自定义节点SubViewportContainer名下的AnimationPlayer节点，记得看一下节点名字是否对上了
+- 代码查找的是你自己自定义查找节点的名字"SubViewportContainer"递归查找节点下的"AnimationPlayer"节点，记得看一下节点名字是否对上了
 - 特效自己可以添加一点
+
+**在你的怪物代码里添加**
+```csharp
+public void SwitchBackgroundImmediate(string backgroundPartName)
+{
+    var bg = BackgroundHelper.GetCombatBackground();
+    if (bg != null)
+        BackgroundHelper.SwitchImmediate(bg, backgroundPartName);
+}
+public async Task SwitchBackgroundWithAnimation(string backgroundPartName,string AnimName = "play")
+{
+    var bg = BackgroundHelper.GetCombatBackground();
+    if (bg != null)
+        await BackgroundHelper.PlaySwitchAnimation(bg, backgroundPartName,AnimName);
+}
+```
+可调用代码
+
 
 油桶蟹代码部分调用
 ![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/4031338A63C36DEA8C0F6FABC53A49F9.webp)
@@ -19,11 +37,10 @@ private async Task AngerAction(IReadOnlyList<Creature> targets)
     ....
 }
 ```
-**SwitchBackgroundWithAnimation(STREET_BG, "ins_op_2")**
-- 优先播放小动画
-  
-**SwitchBackgroundWithAnimation(STREET_BG, "op_2")**
-- 切换场景，调用场景动画里名为op_2动画
+### SwitchBackgroundWithAnimation(string backgroundPartName,string AnimName = "play")
+- backgroundPartName 背景节点名称
+- AnimName 播放的动画名字
+- 未指定播放动画名称，默认播放名为play
 
 猫鬼·黑影代码部分调用
 ![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/02F8D1B209F44D1622034DC530156C66.webp)
@@ -47,8 +64,6 @@ private async Task EnterPhase3()
   ....
 }
 ```
-**未指定播放动画名称**
-- 默认播放名为play
 
 附带
 ![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/E45A1FF57949CE8AAED3FFD700A85E7D.webp)
