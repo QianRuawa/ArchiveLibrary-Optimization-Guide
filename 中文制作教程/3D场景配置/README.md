@@ -1,7 +1,7 @@
 # 3D场景配置制作教程
 **节点要求**
-SubViewportContainer
-——SubViewport
+- SubViewportContainer
+- ——SubViewport
 
 **注意Boss和角色创建是一样的**
 
