@@ -31,11 +31,12 @@ private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
 	....
 }
 ```
-**BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);**
-- 第一个参数是Boss本身
-- ATTACk_EXS_1 设置的代码为 private const string ATTACk_EXS_1 = "Wakamo_Swimsuit_Original_Exs"; 这个是BossEx技能1
-- IDLE_NORMAL 设置的代码为 private const string IDLE_NORMAL = "Wakamo_Swimsuit_Original_Normal_Idle"; 这个是Boss待机 所有的动画结束后，代码会使用你设置的动画来播放
-- 第四个参数，是本次动画播放速度，按你自己喜欢来调整
+### BossAnimationHelper.PlayAttackAsync(Creature creature, string attackAnimName, string idleAnimName = "idle", float speedScale = 0.6f, float originalspeedScale = 0f)
+- creature 是Boss本身
+- attackAnimName 播放的攻击或者技能动画的名字
+- idleAnimName 所有的动画结束后，代码会使用你设置的动画来播放，默认使用idle动画
+- speedScale 本次播放动画的速度
+- originalspeedScale 播放动画完后你可以设置待机动画速度
 
 # 额外动画播放
 在这里看场景配置[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/3D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE/README.md)
@@ -61,7 +62,7 @@ private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
 	....
 }
 ```
-**ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);**
-- 第一个参数是Boss本身
-- Ex_1 这个是Boss场景里设置的额外动画部分
-- 第三个参数，是本次动画播放速度，也按你自己喜欢来调整
+### ExtraAnimationHelper.Play(Creature creature, string animName, float speedScale = 1f)
+- creature 是Boss本身
+- animName 播放的额外动画的名字
+- speedScale 本次动画播放速度，也按你自己喜欢来调整
