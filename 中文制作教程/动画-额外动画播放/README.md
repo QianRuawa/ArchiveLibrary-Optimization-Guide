@@ -27,16 +27,8 @@ private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
 	// 如果不想等待动画播放完后执行的可以去掉await
 	ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);
 	await Cmd.Wait(6.05f);
-	// 自己添加await Cmd.Wait(6.05f);看看Boss动画在什么部分抬手
-	for (int i = 0; i < 6; i++)
-	{
-		await DamageCmd
-			.Attack(DivinationDamage)
-			.FromMonster(this)
-			.Execute(null);
-	}
-	// 易伤
-	await PowerCmd.Apply<VulnerablePower>(new BlockingPlayerChoiceContext(), targets, 3, Creature, null);
+	// 自己添加await Cmd.Wait(6.05f);看看Boss动画在什么部分抬手	
+	....
 }
 ```
 **BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);**
@@ -66,15 +58,7 @@ private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
 	BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);
 	ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);
 	await Cmd.Wait(6.05f);
-	for (int i = 0; i < 6; i++)
-	{
-		await DamageCmd
-			.Attack(DivinationDamage)
-			.FromMonster(this)
-			.Execute(null);
-	}
-	// 易伤
-	await PowerCmd.Apply<VulnerablePower>(new BlockingPlayerChoiceContext(), targets, 3, Creature, null);
+	....
 }
 ```
 **ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);**
