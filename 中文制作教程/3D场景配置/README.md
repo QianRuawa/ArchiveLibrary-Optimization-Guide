@@ -2,8 +2,12 @@
 **节点要求**
 ```
 SubViewportContainer(用于显示 SubViewport 内容的容器)
-  SubViewport(游戏世界的界面，不会创建窗口，也不会直接绘制到屏幕上)
-  PlayerExtraAnimation(额外动画)
+—SubViewport(游戏世界的界面，不会创建窗口，也不会直接绘制到屏幕上)
+——Camera3D(3D场景的摄像头)
+——Node3D(你的3D模型会自动生成)(建议用obj来制作)
+——WorldEnvironment(其实不怎么需要)
+——AnimationPlayer(这个是光环动画)
+—PlayerExtraAnimation(额外动画)
 ```
 **注意Boss和角色创建是一样的**
 
