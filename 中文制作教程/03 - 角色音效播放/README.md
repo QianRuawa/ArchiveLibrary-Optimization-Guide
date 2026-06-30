@@ -40,3 +40,5 @@ static MiyuCharacter()
 简单来说只要在[输入自定义的Fmod]然后本mod拦截，播放你本地的音效 
 
 (1.路径, 2.音效分贝)
+
+![示例1](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/408BE871C536B1AB765C12C4ED0D38EA.webp)
