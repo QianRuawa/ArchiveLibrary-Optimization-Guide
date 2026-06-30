@@ -7,6 +7,8 @@
 
 **在你的怪物代码里添加**
 ```csharp
+public abstract class TestBossId : MonsterModel, IBackgroundSwitchable
+
 public void SwitchBackgroundImmediate(string backgroundPartName)
 {
     var bg = BackgroundHelper.GetCombatBackground();
