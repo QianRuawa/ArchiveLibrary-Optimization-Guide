@@ -1,7 +1,53 @@
+# 动画播放
+在这里看场景配置[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/3D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE/README.md)
+## 角色部分
+![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/C19AF43373B2B5490550802FE7FF0C50.webp)
+![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/4DAE80288DFEF3BFB29E332DB004F1FA.webp)
+
+角色代码
+
+这个部分有讲[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/3D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE/README.md)
+```csharp
+	["Normal"] = new("CH0145_Normal_Idle", "CH0145_Normal_Attack_End",
+					"CH0145_Normal_Reload", "CH0145_Vital_Dying_Ing",
+					"CH0145_Vital_Death"),
+	["Swimsuit"] = new("CH0218_Normal_Idle", "CH0218_Normal_Attack_End",
+					"CH0218_Normal_Reload", "CH0218_Cafe_my_event057_fishbox_01",
+					"CH0218_Vital_Death")
+```
+## Boss部分
+![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/88EF67F2E9CAB0B2AA3F1383C49C555C.webp)
+
+Boss动画制作代码调用
+```csharp
+//琉花占卜
+private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
+{
+	BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);
+	// 如果不想等待动画播放完后执行的可以去掉await
+	ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);
+	await Cmd.Wait(6.05f);
+	// 自己添加await Cmd.Wait(6.05f);看看Boss动画在什么部分抬手
+	for (int i = 0; i < 6; i++)
+	{
+		await DamageCmd
+			.Attack(DivinationDamage)
+			.FromMonster(this)
+			.Execute(null);
+	}
+	// 易伤
+	await PowerCmd.Apply<VulnerablePower>(new BlockingPlayerChoiceContext(), targets, 3, Creature, null);
+}
+```
+**BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);**
+- 第一个参数是Boss本身
+- ATTACk_EXS_1 设置的代码为 private const string ATTACk_EXS_1 = "Wakamo_Swimsuit_Original_Exs"; 这个是BossEx技能1
+- IDLE_NORMAL 设置的代码为 private const string IDLE_NORMAL = "Wakamo_Swimsuit_Original_Normal_Idle"; 这个是Boss待机 所有的动画结束后，代码会使用你设置的动画来播放
+- 第四个参数，是本次动画播放速度，按你自己喜欢来调整
+
 # 额外动画播放
 在这里看场景配置[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/3D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE/README.md)
 
-**该方法适应全部**
 ## 角色配置
 默认对应原游戏里的5个动画名
 ![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/D040BE6E019E0179AFB2237220C08A97.webp)
@@ -14,39 +60,24 @@
 
 代码部分调用
 ```csharp
-	//琉花占卜
-	private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
+//琉花占卜
+private async Task RuriDivinationMove(IReadOnlyList<Creature> targets)
+{
+	BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);
+	ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);
+	await Cmd.Wait(6.05f);
+	for (int i = 0; i < 6; i++)
 	{
-		BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_1 ,IDLE_NORMAL,1.0f);
-		ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);
-    ....
-	}
-	//占有之榴弹
-	private async Task PossessionGrenadeMove(IReadOnlyList<Creature> targets)
-	{
-		BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_2 ,IDLE_NORMAL,1.0f);
-        ExtraAnimationHelper.PlayAsync(Creature, "Ex_2", 1f, "Idle");
-		await Cmd.Wait(5.32f);
-		for (int i = 0; i < 2; i++)
-		{
-			await DamageCmd
-				.Attack(GrenadeDamage)
-				.FromMonster(this)
-				.Execute(null);
-		}
-		//获取格挡
-		await CreatureCmd.GainBlock(Creature, GrenadeBlock, ValueProp.Move, null);
-	}
-	//思慕之霰弹
-	private async Task YearningShotgunMove(IReadOnlyList<Creature> targets)
-	{
-		BossAnimationHelper.PlayAttackAsync(Creature, ATTACk_EXS_3 ,IDLE_NORMAL,1.0f);
-		ExtraAnimationHelper.PlayAsync(Creature, "Ex_3", 1f, "Idle");
-		await Cmd.Wait(5.30f);
 		await DamageCmd
-			.Attack(ShotgunDamage)
+			.Attack(DivinationDamage)
 			.FromMonster(this)
 			.Execute(null);
 	}
+	// 易伤
+	await PowerCmd.Apply<VulnerablePower>(new BlockingPlayerChoiceContext(), targets, 3, Creature, null);
+}
 ```
-
+**ExtraAnimationHelper.Play(Creature, "Ex_1", 1f);**
+- 第一个参数是Boss本身
+- Ex_1 这个是Boss场景里设置的额外动画部分
+- 第三个参数，是本次动画播放速度，也按你自己喜欢来调整
