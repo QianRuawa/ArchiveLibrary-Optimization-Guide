@@ -9,7 +9,7 @@ public class TestEntiyId
 		LibraryLogger.SetPrefix("XXXX");
 }
 ```
-###调用LibraryLogger.Info(string message, [CallerFilePath] string filePath = "", [CallerLineNumber] int lineNumber = 0)
+###调用LibraryLogger.Info(string message, [CallerFilePath】 string filePath = "", [CallerLineNumber】 int lineNumber = 0)
 
 **Log.Info($"{GetPrefix()}{{信息}}: {message} 路径：{GetShortPath(filePath)}:{lineNumber}");**
 
