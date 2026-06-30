@@ -30,7 +30,7 @@ public class MiyuCharacter : ModCharacterTemplate<MiyuCardPool, MiyuRelicPool, M
 	static MiyuCharacter()
 	{
 		CharacterAnimationRegistry.Register(
-			"KASUMIZAWA_MIYU_CHARACTER_MIYU_CHARACTER", // 在先古那里可以到你角色ID部分 -> "NEOW.talk.KASUMIZAWA_MIYU_CHARACTER_MIYU_CHARACTER.1-0r.ancient": "[sine]小兔子...可能...你...需要...再来一次...[/sine]",
+			"KASUMIZAWA_MIYU_CHARACTER_MIYU_CHARACTER", // 在先古那里可以看到你角色ID部分 -> "NEOW.talk.KASUMIZAWA_MIYU_CHARACTER_MIYU_CHARACTER.1-0r.ancient": "[sine]小兔子...可能...你...需要...再来一次...[/sine]",
 			new SkinAnimationProvider(
 				nodePath: "miyu_character",// 这个是角色场景节点名
 				extraNodePath: "PlayerExtraAnimation",// 额外动画节点名（可选添加）
