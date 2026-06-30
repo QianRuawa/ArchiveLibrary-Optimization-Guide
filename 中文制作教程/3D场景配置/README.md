@@ -10,6 +10,9 @@ SubViewportContainer(用于显示 SubViewport 内容的容器)
 —PlayerExtraAnimation(额外动画)
 ```
 **注意Boss和角色创建是一样的**
+### 特别注意一下
+**创建SubViewport节点时**
+![示例1](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/7ca610281875ebaa3241189451e509a7.webp)
 
 ## 角色配置
 ![示例1](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/AFE8999EFB421D45763A8CC8163F60B3.webp)
