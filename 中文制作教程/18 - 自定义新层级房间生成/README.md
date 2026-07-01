@@ -1,4 +1,9 @@
 # 自定义新层级房间生成
+**优化创建自定义房间生成**
+- 节点特效
+- 背景美化
+![示例1](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/654bb2a65282eac3549e6c6876069ac3.webp)
+
 创建新文件
 
 继承 ModMapTemplate 创建章节的房间生成
@@ -20,4 +25,31 @@ public class MyMap : ModMapTemplate
         a.AddChildPoint(b);
         b.AddChildPoint(_boss);
     }
+}
 ```
+**如果需要房间节点下创建生成特效**
+
+*可以看一下这里*
+```csharp
+public class MyMap : ModMapTemplate
+{
+....
+    //  粒子特效
+    protected override string? ParticleScenePath => ""; 
+    protected override string? BossVfxScenePath => "";
+    // 节点视觉
+    protected override void SetupPointVisuals()
+    {
+        SetPointStyle(3, 1);
+        SetPointStyle(2, 2);
+        ....
+        AddBossVfx(3, 8);
+    }
+....
+}
+```
+### ParticleScenePath
+**普通房间节点下的特效**
+- 默认固定跳过先古和Boss
+### BossVfxScenePath
+**Boss房间节点下的特效**
