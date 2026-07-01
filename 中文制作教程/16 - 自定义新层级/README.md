@@ -6,6 +6,7 @@
 - 默认拦截达弗，可以自己设置
 - 允许在A10，可以自己设置是否存在第2个Boss
 - - 未设置，默认在第3层添加第2个Boss
+- 自定义固定事件
 
 但是制作比较复杂
 ![示例1](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/654bb2a65282eac3549e6c6876069ac3.webp)
