@@ -37,7 +37,7 @@ static MiyuCharacter()
 - CharacterSelectSfx: "event:/sfx/miyu_character_select",
 - ["event:/sfx/miyu_character_select"] = ("res://sound/Miyu_character_select_1.ogg", -7f),
 
-简单来说只要在[输入自定义的Fmod]然后本mod拦截，播放你本地的音效 
+简单来说只要在[输入自定义的Fmod]然后拦截，播放你本地的音效 
 
 (1.路径, 2.音效分贝)
 
