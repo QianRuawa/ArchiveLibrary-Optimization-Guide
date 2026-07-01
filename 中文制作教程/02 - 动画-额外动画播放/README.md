@@ -1,12 +1,12 @@
 # 动画播放
-在这里看场景配置[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/3D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE/README.md)
+在这里看场景配置[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/01%20-%20%E8%A7%92%E8%89%B23D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE)
 ## 角色部分
 ![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/C19AF43373B2B5490550802FE7FF0C50.webp)
 ![示例](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/4DAE80288DFEF3BFB29E332DB004F1FA.webp)
 
 角色代码
 
-这个部分有讲[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/3D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE/README.md)
+这个部分有讲[3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/01%20-%20%E8%A7%92%E8%89%B23D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE)
 ```csharp
 	["Normal"] = new("CH0145_Normal_Idle", "CH0145_Normal_Attack_End",
 					"CH0145_Normal_Reload", "CH0145_Vital_Dying_Ing",
