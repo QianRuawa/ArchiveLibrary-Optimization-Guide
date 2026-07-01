@@ -2,9 +2,10 @@
 **可以让你方便的创建新的层级**
 - 自动注册，无需补丁
 - 自动在怪物图鉴注册
-- 如果没有添加[篝火/宝箱]等背景，默认帮你添加
+- 如果没有添加[篝火/宝箱]等背景资源，默认帮你添加原版的资源
 - 默认拦截达弗，可以自己设置
 - 允许在A10，可以自己设置是否存在第2个Boss
+- - 未设置，默认在第3层添加第2个Boss
 
 但是制作比较复杂
 ![示例1](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/blob/main/images/654bb2a65282eac3549e6c6876069ac3.webp)
@@ -56,10 +57,18 @@ public class ExtraAct : ModActTemplate
     }
 }
 ```
-
+**需要创建原版的acts.json文件**
 ```
+res://
+└── TestId(对应modid)
+    └── localization
+        ├── zhs
+		│    └── acts.json
+        ├── eng
+		│    └── acts.json
+		等等
 ```
-json内容
+**json内容**
 ```csharp
 {
   "STEEL_CONTINENT.title": "钢铁大陆"
@@ -80,4 +89,8 @@ json内容
 - CustomMapMidBgPath 地图中间背景
 - CustomMapBotBgPath 地图低部背景
 ### 层级音乐
-**你可以自己复用原游戏的**
+**你可以直接复用原游戏的**
+
+我这边制作是直接复用的
+### 房间类型分布
+**按你自己设计的房间来**
