@@ -5,8 +5,8 @@
 [ModInitializer(nameof(Init))]
 public class TestEntiyId
 {
-		// 设置日志中文前缀
-		LibraryLogger.SetPrefix("XXXX");
+	// 设置日志中文前缀
+	LibraryLogger.SetPrefix("XXXX");
 }
 ```
 ### 调用LibraryLogger.Info(string message, [CallerFilePath] string filePath = "", [CallerLineNumber] int lineNumber = 0)
