@@ -1,26 +1,21 @@
 # ArchiveLibrary-Optimization-Guide
-- **层级音乐播放辅助**
-- **BGM播放辅助**
-- **音效播放辅助**
-- **额外血量显示优化[类似一代，我忘记了那个mod]**
-- **固定怪物意图伤害单多段攻击**
-- **支持单/多3D皮肤的动画场景辅助播放**
-- **角色音效替换注册辅助**
-- *拦截原游戏fmod，播放自定义音效*
-- **自定义地图基类**
-- *固定事件 / 替换房间图标 / 房间节点下生成特效 / 自动注册到怪物图鉴*
-- **先古遗物图鉴分类注册辅助**
-- **自定义意图悬浮提示框辅助**
-- **为Power提供正负Amount的两套图标路径**
-- *标题 / 描述 / 图标路径 / 简介框颜色均根据 Amount 符号自动切换*
-- **卡牌浮动文字的显示辅助**
-- **生物位移能力辅助，声明可击退/牵引**
-- **判断存在遗物相关的辅助**
-- **额外多语言翻译辅助**
-- **配置日志工具辅助**
-- **可切换战斗背景的辅助**
-- **3DBoss动画播放辅助**
-- **3D场景材质提供接口**
-- **生物视觉节点辅助**
-- **额外动画播放辅助**
-- **标题动画播放辅助**
+**直接点击跳转**
+- **[配置日志工具](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/00%20-%20%E9%85%8D%E7%BD%AE%E6%97%A5%E5%BF%97%E5%B7%A5%E5%85%B7)**
+- **[角色3D场景配置](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/01%20-%20%E8%A7%92%E8%89%B23D%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE)**
+- **[动画-额外动画播放](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/02%20-%20%E5%8A%A8%E7%94%BB-%E9%A2%9D%E5%A4%96%E5%8A%A8%E7%94%BB%E6%92%AD%E6%94%BE)**
+- **[角色音效播放](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/03%20-%20%E8%A7%92%E8%89%B2%E9%9F%B3%E6%95%88%E6%92%AD%E6%94%BE)**
+- **[Bgm音乐播放](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/04%20-%20BossBgm%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE)**
+- **[视觉场景材质修改](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/05%20-%20Boss%E8%A7%86%E8%A7%89%E5%9C%BA%E6%99%AF%E6%9D%90%E8%B4%A8%E4%BF%AE%E6%94%B9)**
+- **[怪物固定攻击意图伤害](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/06%20-%20%E6%80%AA%E7%89%A9%E5%9B%BA%E5%AE%9A%E6%94%BB%E5%87%BB%E6%84%8F%E5%9B%BE%E4%BC%A4%E5%AE%B3)**
+- **[怪物攻击意图标题介绍修改](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/07%20-%20%E6%80%AA%E7%89%A9%E6%94%BB%E5%87%BB%E6%84%8F%E5%9B%BE%E6%A0%87%E9%A2%98%E4%BB%8B%E7%BB%8D%E4%BF%AE%E6%94%B9)**
+- **[切换战斗背景](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/08%20-%20%E5%88%87%E6%8D%A2%E6%88%98%E6%96%97%E8%83%8C%E6%99%AF)**
+- **[生物位移能力](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/09%20-%20%E7%94%9F%E7%89%A9%E4%BD%8D%E7%A7%BB%E8%83%BD%E5%8A%9B)**
+- **[生成标题动画](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/10%20-%20%E7%94%9F%E6%88%90%E6%A0%87%E9%A2%98%E5%8A%A8%E7%94%BB)**
+- **[判断存在遗物相关](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/11%20-%20%E5%88%A4%E6%96%AD%E5%AD%98%E5%9C%A8%E9%81%97%E7%89%A9%E7%9B%B8%E5%85%B3)**
+- **[先古遗物图鉴分类注册](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/12%20-%20%E5%85%88%E5%8F%A4%E9%81%97%E7%89%A9%E5%9B%BE%E9%89%B4%E5%88%86%E7%B1%BB%E6%B3%A8%E5%86%8C)**
+- **[额外多语言翻译辅助](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/13%20-%20%E9%A2%9D%E5%A4%96%E5%A4%9A%E8%AF%AD%E8%A8%80%E7%BF%BB%E8%AF%91%E8%BE%85%E5%8A%A9)**
+- **[单正负Power工具[双模式]](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/14%20-%20%E5%8D%95%E6%AD%A3%E8%B4%9FPower%E5%B7%A5%E5%85%B7%5B%E5%8F%8C%E6%A8%A1%E5%BC%8F%5D)**
+- **[额外血量显示优化](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/15%20-%20%E9%A2%9D%E5%A4%96%E8%A1%80%E9%87%8F%E6%98%BE%E7%A4%BA%E4%BC%98%E5%8C%96)**
+- **[自定义新层级](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/16%20-%20%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B0%E5%B1%82%E7%BA%A7)**
+- **[层级音乐播放辅助](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/17%20-%20%E5%B1%82%E7%BA%A7%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E8%BE%85%E5%8A%A9)**
+- **[自定义新层级房间生成](https://github.com/QianRuawa/ArchiveLibrary-Optimization-Guide/tree/main/%E4%B8%AD%E6%96%87%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/18%20-%20%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B0%E5%B1%82%E7%BA%A7%E6%88%BF%E9%97%B4%E7%94%9F%E6%88%90)**
