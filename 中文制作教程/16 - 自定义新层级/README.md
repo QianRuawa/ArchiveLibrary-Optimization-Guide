@@ -40,6 +40,12 @@ public class ExtraAct : ModActTemplate
     public override string ChestSpineSkinNameNormal => ...;
     public override string ChestSpineSkinNameStroke => ...;
     public override string ChestSpineResourcePath => ...;
+	// 固定事件 <事件Id>(房间坐标);
+	public ExtraAct()
+	{
+		SetFixedEvent<事件Id>(3, 1);
+		SetFixedEvent<事件Id>(3, 4);
+	}
     // 房间类型分布
     public override MapPointTypeCounts GetCustomMapPointTypes(Rng mapRng)
     {
